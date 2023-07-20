@@ -1,0 +1,37 @@
+.dashboard-body {
+  display: flex;
+  width: 100%;
+  height: 85%;
+}
+
+.left-nav {
+  width: 10%;
+}
+
+.main-content {
+  width: 90%;
+}
+
+.layout {
+  height: 100%;
+}
+
+.inputs {
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.w-13 {
+  width: 13%;
+}
+
+.divider {
+  display: block;
+  background-color: #e8e8e8;
+  width: 1px;
+  margin-left: 0.4rem;
+}

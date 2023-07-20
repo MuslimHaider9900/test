@@ -1,0 +1,24 @@
+<div class="d-flex">
+  <mat-nav-list class="main-menu-nav-list">
+    <div class="nav-items-custom" [ngClass]="selectedItem == sideNavItemsEnum.login ? 'is-active' : ''">
+      <a (click)="itemChange(sideNavItemsEnum.login)">
+        <mat-icon class="material-icons-outlined">task_alt</mat-icon>
+        <span>Login</span>
+      </a>
+    </div>
+
+    <div class="nav-items-custom" [ngClass]="selectedItem == sideNavItemsEnum.profile ? 'is-active' : ''">
+      <a (click)="itemChange(sideNavItemsEnum.profile)">
+        <mat-icon class="material-icons-outlined">person</mat-icon>
+        <span>Profile</span>
+      </a>
+    </div>
+
+    <div class="nav-items-custom" [ngClass]="selectedItem == sideNavItemsEnum.favorite ? 'is-active' : ''">
+      <a (click)="itemChange(sideNavItemsEnum.favorite)">
+        <mat-icon class="material-icons-outlined">favorite </mat-icon>
+        <span>Favorites</span>
+      </a>
+    </div>
+  </mat-nav-list>
+</div>

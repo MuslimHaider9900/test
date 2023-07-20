@@ -1,0 +1,17 @@
+.nav-items-custom {
+  padding: 1rem !important;
+  font-size: 20px;
+  font-weight: 500;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+}
+
+mat-nav-list {
+  .is-active {
+    color: #673ab7;
+  }
+}
