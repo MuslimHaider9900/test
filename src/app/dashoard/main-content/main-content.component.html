@@ -1,0 +1,161 @@
+<!-- using inline css to save time -->
+
+<div class="main-content">
+  <div class="layout">
+    <div class="table-area">
+      <div style="margin: 1rem;">
+        <div class="table-list">
+          <table mat-table [dataSource]="dataSource" class="data-manager-custom-table">
+
+            <ng-container matColumnDef="ID">
+              <th mat-header-cell *matHeaderCellDef class="main-content-text">
+                ID </th>
+              <td mat-cell *matCellDef="let element index as i">
+                <div class="action-button-column hoverArea">
+                  {{element.id}}
+                </div>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="first_name">
+              <th mat-header-cell *matHeaderCellDef class="main-content-text">
+                First Name </th>
+              <td mat-cell *matCellDef="let element index as i">
+                <div class="action-button-column hoverArea">
+                  {{element.first_name}}
+                </div>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="last_name">
+              <th mat-header-cell *matHeaderCellDef class="main-content-text">
+                Last Name </th>
+              <td mat-cell *matCellDef="let element index as i">
+                <div class="action-button-column hoverArea">
+                  {{element.last_name}}
+                </div>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef class="main-content-text">
+                Email</th>
+              <td mat-cell *matCellDef="let element index as i">
+                <div class="action-button-column hoverArea">
+                  {{element.email}}
+
+                </div>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="avatar">
+              <th mat-header-cell *matHeaderCellDef class="main-content-text">
+                Avatar</th>
+              <td mat-cell *matCellDef="let element index as i">
+                <div class="action-button-column hoverArea">
+                  <img style="border-radius: 16rem;width: 2rem;height: 2rem;" [src]="element.avatar">
+
+                </div>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <mat-paginator [length]="tableData.total" [pageSize]="tableData.per_page"
+          [pageSizeOptions]="[2,4,6]"></mat-paginator>
+      </div>
+
+    </div>
+    <div class="card-area">
+      <div class="card">
+        <div class="custom-card">
+          <div
+            style="background-color: #eeeeee;height: 7rem;display: flex;align-items: center;justify-content: center;">
+            <div style="color: #aaaaaa;font-size: 2rem;font-weight: 500;">Small World </div>
+          </div>
+          <div style="height:8rem;background: white; padding: 1rem;">
+            <h2>Header</h2>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="custom-card">
+          <div
+            style="background-color: #eeeeee;height: 7rem;display: flex;align-items: center;justify-content: center;">
+            <div style="color: #aaaaaa;font-size: 2rem;font-weight: 500;">Small World </div>
+          </div>
+          <div style="height:8rem;background: white; padding: 1rem;">
+            <h2>Header</h2>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="custom-card">
+          <div
+            style="background-color: #eeeeee;height: 7rem;display: flex;align-items: center;justify-content: center;">
+            <div style="color: #aaaaaa;font-size: 2rem;font-weight: 500;">Small World </div>
+          </div>
+          <div style="height:8rem;background: white; padding: 1rem;">
+            <h2>Header</h2>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-nav">
+    <div style="padding: 1rem;">
+      <div style="background-color: white;border-radius: 5px; height: 14rem;padding: 1rem;font-weight: 600;">
+        Phase Result
+        <div style="display: flex;align-items: center;margin: 1rem;margin-left: 1rem;font-weight: 500;">
+          <div>
+            Phase #1 results:
+          </div>
+          <div style="margin-left: auto;opacity: 0.6;">
+            6
+          </div>
+        </div>
+        <div style="display: flex;align-items: center;margin: 1rem;margin-left: 1rem;font-weight: 500;">
+          <div>
+            Phase #1 results:
+          </div>
+          <div style="margin-left: auto;opacity: 0.6;">
+            6
+          </div>
+        </div>
+        <div style="display: flex;align-items: center;margin: 1rem;margin-left: 1rem;font-weight: 500;">
+          <div>
+            Phase #1 results:
+          </div>
+          <div style="margin-left: auto;opacity: 0.6;">
+            6
+          </div>
+        </div>
+      </div>
+      <div>
+        <mat-form-field style="width: 100%;margin-top: 3rem;" appearance="fill">
+          <mat-label>Input</mat-label>
+          <input [formControl]="test" matInput>
+        </mat-form-field>
+      </div>
+      <div style="background-color: #c3e086;border-radius: 5px; height: 20rem;padding: 1rem;font-weight: 600;">
+        <div
+          style="display: flex;align-items: center;margin: 1rem;margin-left: 1rem;font-weight: 500;justify-content: center;margin-top: 5rem;">
+          <div>
+            Current Progress
+          </div>
+        </div>
+        <div
+          style="display: flex;align-items: center;margin: 1rem;margin-left: 1rem;font-weight: 500;justify-content: center;">
+          <div>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

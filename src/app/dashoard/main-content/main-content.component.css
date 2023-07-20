@@ -1,0 +1,41 @@
+.main-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.table-area {
+  height: 52%;
+}
+
+.layout {
+  width: 80%;
+}
+
+.card-area {
+  height: 46%;
+  background: whitesmoke;
+  display: flex;
+}
+
+
+.right-nav {
+  background: whitesmoke;
+  width: 20%;
+}
+
+.custom-card {
+  height: 17rem;
+  width: 70%;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+  border-style: solid;
+  border-width: 0;
+}
+
+.card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  margin-left: 2rem;
+}

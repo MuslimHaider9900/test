@@ -1,0 +1,38 @@
+<div class="layout">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="inputs">
+    <mat-form-field class="w-13" appearance="fill">
+      <mat-label>Agent Name</mat-label>
+      <mat-select [formControl]="agentName">
+        <mat-option value="Dolor">Dolor</mat-option>
+        <mat-option>Dolor</mat-option>
+        <mat-option>Dolor</mat-option>
+        <mat-option>Dolor</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="w-13" appearance="fill">
+      <mat-label>Country</mat-label>
+      <mat-select [formControl]="country">
+        <mat-option value="Pakistan">Pakistan</mat-option>
+        <mat-option>Dolor</mat-option>
+        <mat-option>Dolor</mat-option>
+        <mat-option>Dolor</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="dashboard-body">
+    <div class="left-nav">
+      <app-left-side-nav></app-left-side-nav>
+    </div>
+    <div class="divider">
+      <mat-divider></mat-divider>
+    </div>
+    <div class="main-content">
+      <div *ngIf="!router.url.includes('login')">Pick any item from left</div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
